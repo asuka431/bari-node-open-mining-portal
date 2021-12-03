@@ -1,0 +1,113 @@
+{
+    "enabled": true,
+    "coin": "baricoin.json",
+
+    "address": "マイニングアドレス",
+
+    "rewardRecipients": {
+        "プール運営報酬アドレス": 1.0 
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 600,
+        "minimumPayment": 5,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 8134,
+            "user": "baricoin.confに指定したusername",
+            "password": "baricoin.confに指定したpassword"
+        }
+    },
+
+    "ports": {
+        "3031": {
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 1,
+                "maxDiff": 524288,
+                "targetTime": 10,
+                "retargetTime": 60,
+                "variancePercent": 30
+            }
+        },
+        "3032": {
+            "diff": 128,
+            "varDiff": {
+                "minDiff": 32,
+                "maxDiff": 524288,
+                "targetTime": 10,
+                "retargetTime": 60,
+                "variancePercent": 30
+            }
+        },
+        "3033": {
+            "diff": 512,
+            "varDiff": {
+                "minDiff": 128,
+                "maxDiff": 524288,
+                "targetTime": 10,
+                "retargetTime": 60,
+                "variancePercent": 30
+            }
+        },
+        "3034": {
+            "diff": 4096,
+            "varDiff": {
+                "minDiff": 512,
+                "maxDiff": 524288,
+                "targetTime": 10,
+                "retargetTime": 60,
+                "variancePercent": 30
+            }
+        },
+        "3035": {
+            "diff": 32768,
+            "varDiff": {
+                "minDiff": 4096,
+                "maxDiff": 524288,
+                "targetTime": 10,
+                "retargetTime": 60,
+                "variancePercent": 30
+            }
+        },
+        "3036": {
+            "diff": 262144,
+            "varDiff": {
+                "minDiff": 32768,
+                "maxDiff": 2097152,
+                "targetTime": 10,
+                "retargetTime": 60,
+                "variancePercent": 30
+            }
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 8134,
+            "user": "baricoin.confに指定したusername",
+            "password": "baricoin.confに指定したpassword"
+        }
+    ],
+
+    "p2p": {
+        "enabled": true,
+        "host": "127.0.0.1",
+        "port": 8135,
+        "disableTransactions": true
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": true,
+        "autoCreateWorker": false
+    }
+
+}

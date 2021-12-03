@@ -1,0 +1,8 @@
+{
+    "name": "Baricoin",
+    "symbol": "BARI",
+    "algorithm": "yescryptR8",
+    "peerMagic": "66658273",
+    "peerMagicTestnet": "98617266",
+    "blockTime": 60
+}
